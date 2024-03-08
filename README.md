@@ -23,5 +23,24 @@ This project is to reproduce the resulting code from the paper MUTAN: Multimodal
 
 ### 2.4修改train代码
 
+### 2.5画图
 
+### 2.6评估
 
+## 3.run 注意力模型
+
+### 3.1数据下载
+
+### 3.2数据处理
+
+### 3.3数据存放位置
+
+### 3.4修改train代码
+
+### 3.5画图
+
+### 3.6评估
+
+## 4.可以修改的地方
+
+​				对于注意力模型而言，我觉得视觉嵌入部分换成VIT，文本特征提取部分换成一个纯的transformer的Encoder，然后将注意力那里重复L次，可能得到的结果会提升2-5个点，但需要大量的计算资源。
