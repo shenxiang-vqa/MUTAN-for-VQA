@@ -1,39 +1,27 @@
 ## MUTAN-for-VQAv2
 
 This project is to reproduce the resulting code from the paper MUTAN: Multimodal Tucker Fusion for Visual Question Answering, and I will teach you in detail how to run through this code, including the processing of the dataset.
-## 1.项目结构
-||==> AttenMUTANmodels #带有注意力的MUTAN“模型文件”
+## 1.背景介绍
 
-  	|==> image_feature.py #视觉特征提取器
+​		此项目是基于MUTAN这篇论文而写的代码，其论文地址和论文源码如下。
 
-  	|==> bert_encoder.py #文本特征提取器
+论文地址：https://arxiv.org/abs/1705.06676
 
- 	 |==> fusion.py #Tucker Fusioon 脚本
+源码地址：https://github.com/Cadene/vqa.pytorch
 
- 	 |==> My_Att_MUTANmodel.py #模型文件
+​		我们需要解决的问题是视觉问答，再具体一点是视觉问答里面的特征融合部分。在过去，还没有那么大的预训练模型出现之前，对于VQA任务最重要的就是做两种不同模态之间的特征融合。我们希望通过模态融合来学习到一个联合特征表示。在过去的那几年，模态融合做的比较好的代表就是：**双线性（Bilinear）模型 or 双线性池化**，但是这种原始的Bilinear再后续的线性层会产生大量的参数。因此后续工作都是对Bilinear做降维处理，其中典型的代表有：**MCBP、MLBP、MFBP、MUTAN**等工作。我们今天想介绍的就是MUTAN这篇工作，原理大家可以自行去论文里面学习，我们这个项目重点是为了教会大家如何跑起来我们的项目。
 
-||==> baseline_models #不带注意力的基线模型文件
 
-  	|==> image_feature.py #视觉特征提取器
 
-  	|==> bert_encoder.py #文本特征提取器
+## 2.run 基线模型
 
-  	|==> fusion.py #Tucker Fusioon 脚本
+### 2.1数据下载
 
- 	|==> MUTANmodel.py #模型文件
+### 2.2数据处理
 
-||==> Evaluate_Vqav2 #评估模型的文件
+### 2.3数据存放位置
 
-  	|==> PythonEvaluationTools #模型评估工具
+### 2.4修改train代码
 
-​			|==> vqaEvaluation #里面存放了一个评估模型所用的类vqaEval.py
 
- 	 |==> PythonHelperTools #这个也是官方给的文件
 
-​			|==> vqaTools #里面存放了一个vqa.py文件
-
-​	  |==> QuestionTypes #问题类型文件夹
-
- 	 |==> Results #存放模型输出结果的文件
-
-  	|==> evaluate.py #评估模型的主要文件
