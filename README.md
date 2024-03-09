@@ -11,6 +11,8 @@ This project is to reproduce the resulting code from the paper MUTAN: Multimodal
 
 我们需要解决的问题是视觉问答，再具体一点是视觉问答里面的特征融合部分。在过去，还没有那么大的预训练模型出现之前，对于VQA任务最重要的就是做两种不同模态之间的特征融合。我们希望通过模态融合来学习到一个联合特征表示。在过去的那几年，模态融合做的比较好的代表就是：**双线性（Bilinear）模型 or 双线性池化**，但是这种原始的Bilinear再后续的线性层会产生大量的参数。因此后续工作都是对Bilinear做降维处理，其中典型的代表有：**MCBP、MLBP、MFBP、MUTAN**等工作。我们今天想介绍的就是MUTAN这篇工作，原理大家可以自行去论文里面学习，我们这个项目重点是为了教会大家如何跑起来我们的项目。
 
+![image](https://github.com/nuistzimoli/MUTAN-for-VQA/blob/main/Image/mutan.png)
+
 
 
 ## 2.run
@@ -21,7 +23,7 @@ This project is to reproduce the resulting code from the paper MUTAN: Multimodal
 
 将下面文件下载到路径：D:\data\Pretrained_data\BERT下面
 
-![](D:\Original_Document\桌面\image-20240309132357331.png)
+![image](https://github.com/nuistzimoli/MUTAN-for-VQA/blob/main/Image/bertpath.png)
 
 
 
@@ -29,18 +31,18 @@ This project is to reproduce the resulting code from the paper MUTAN: Multimodal
 
 ​		在官网分别下载下面的数据：https://visualqa.org/download.html
 
-1.![image-20240309124310632](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20240309124310632.png)
+1.![image](https://github.com/nuistzimoli/MUTAN-for-VQA/blob/main/Image/dataannotation.png)
 
-2.![image-20240309124325544](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20240309124325544.png)
+2.![image](https://github.com/nuistzimoli/MUTAN-for-VQA/blob/main/Image/dataquestion.png)
 
-3.![image-20240309124338417](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20240309124338417.png)
+3.![image](https://github.com/nuistzimoli/MUTAN-for-VQA/blob/main/Image/dataimage.png)
 
 数据存放地址为：D:/data/VQA_data/VQAv2，压缩包下载到这个地址，然后创建三个文件夹，annotations，images，questions。分别把下载的压缩文件解压到对应的文件夹里面。如下：
-![image-20240309124556768](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20240309124556768.png)
+![image](https://github.com/nuistzimoli/MUTAN-for-VQA/blob/main/Image/jieyaannotation.png)
 
-![image-20240309124616621](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20240309124616621.png)
+![image](https://github.com/nuistzimoli/MUTAN-for-VQA/blob/main/Image/jieyaimage.png)
 
-![image-20240309124625862](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20240309124625862.png)
+![image](https://github.com/nuistzimoli/MUTAN-for-VQA/blob/main/Image/jieyaquestion.png)
 
 
 
@@ -48,7 +50,7 @@ This project is to reproduce the resulting code from the paper MUTAN: Multimodal
 
 我们先来看看数据处理的过程！
 
-![画图](D:\Original_Document\桌面\画图.png)
+![image](https://github.com/nuistzimoli/MUTAN-for-VQA/blob/main/Image/1.png)
 
 数据处理的脚本文件在utils文件夹里面，下面我们按顺序依次运行即可。
 
@@ -79,7 +81,7 @@ This project is to reproduce the resulting code from the paper MUTAN: Multimodal
 
 首先进入到utils/ploter.py脚本下：您可能要修改如下路径，要对应好你自己的路径，不然会报错
 
-![image-20240309131042990](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20240309131042990.png)
+![image](https://github.com/nuistzimoli/MUTAN-for-VQA/blob/main/Image/2.png)
 
 
 
@@ -97,7 +99,7 @@ This project is to reproduce the resulting code from the paper MUTAN: Multimodal
 
 - 需要修改的地方可能为：（除了它其余地方不要改）
 
-  ![image-20240309131514833](D:\Original_Document\桌面\image-20240309131514833.png)
+  ![image](https://github.com/nuistzimoli/MUTAN-for-VQA/blob/main/Image/3.png)
 
 - 然后运行evaluate.py即可，就得到了训练好的模型对验证集的评估。
 
@@ -115,11 +117,11 @@ This project is to reproduce the resulting code from the paper MUTAN: Multimodal
 - 先注册账号
 - 然后按照下面执行
 
-![image-20240309132059717](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20240309132059717.png)
+![image](https://github.com/nuistzimoli/MUTAN-for-VQA/blob/main/Image/4.png)
 
-![image-20240309132118707](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20240309132118707.png)
+![image](https://github.com/nuistzimoli/MUTAN-for-VQA/blob/main/Image/5.png)
 
-![image-20240309132159140](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20240309132159140.png)
+![image](https://github.com/nuistzimoli/MUTAN-for-VQA/blob/main/Image/6.png)
 
 最后点击submit即可，等待五分钟左右即可看到结果。
 
