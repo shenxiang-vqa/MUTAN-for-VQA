@@ -21,7 +21,7 @@ This project is to reproduce the resulting code from the paper MUTAN: Multimodal
 
 将下面文件下载到路径：D:\data\Pretrained_data\BERT下面
 
-![image-20240309132357331](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20240309132357331.png)
+![](D:\Original_Document\桌面\image-20240309132357331.png)
 
 
 
