@@ -121,7 +121,6 @@ This project is to reproduce the resulting code from the paper MUTAN: Multimodal
 
 ![image](https://github.com/nuistzimoli/MUTAN-for-VQA/blob/main/Image/5.png)
 
-![image](https://github.com/nuistzimoli/MUTAN-for-VQA/blob/main/Image/6.png)
 
 最后点击submit即可，等待五分钟左右即可看到结果。
 
