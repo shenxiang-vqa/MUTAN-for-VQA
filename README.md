@@ -52,7 +52,6 @@
 
 &emsp;&emsp;​​我们先来看看数据处理的过程！
 
-![image](https://github.com/nuistzimoli/MUTAN-for-VQA/blob/main/Image/1.png)
 
 &emsp;&emsp;​​数据处理的脚本文件在utils文件夹里面，下面我们按顺序依次运行即可。
 
