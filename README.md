@@ -132,10 +132,34 @@
 
 ### 3.1 Atten模型在训练集和验证集上的表现
 
-![image]()
-![image]()
+![image](https://github.com/nuistzimoli/MUTAN-for-VQA/blob/main/Image/Att_Train2Val_Loss.png)
+![image](https://github.com/nuistzimoli/MUTAN-for-VQA/blob/main/Image/Att_Train2Val_Acc.png)
 
 ### 3.2 Baseline模型和Atten模型在测试集上的表现
+
+#### 3.2.1 Baseline模型
+
+| 模型 | Test-Dev | Test-std |  
+| :--: | :--: | :--: |  
+| 源码 | 60.17 | 58.16 |  
+| Ours | 51.22 | 51.5 |
+
+#### 3.2.2 AttenMUTAN模型
+
+| 模型 | Test-Dev | Test-std |  
+| :--: | :--: | :--: |  
+| 源码 | 67.42 | 67.36 |  
+| Ours | 52.65 | 52.89 |
+
+#### 3.2.3 精度分析
+
+&emsp;&emsp;可以看到无论是Baseline模型还是Atten模型，我们的整体精度都比源论文给的精度要低很多。我认为可能的原因如下：
+
+(1)：文本特征提取部分可能效果不如Glove好
+
+(2)：在模型参数初始化上，本代码没有做任何调整
+
+(3)：模型超参数和原文没保持一致，特别是初始学习率和学习率更新的步长，然后训练的epoch也不够，因此模型没有收敛
 
 
 ## 4.可以修改的地方
