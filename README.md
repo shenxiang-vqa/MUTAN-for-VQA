@@ -82,7 +82,7 @@
 
 &emsp;&emsp;​​首先进入到utils/ploter.py脚本下：您可能要修改如下路径，要对应好你自己的路径，不然会报错
 
-![image](https://github.com/nuistzimoli/MUTAN-for-VQA/blob/main/Image/2.png)
+![image](https://github.com/nuistzimoli/MUTAN-for-VQA/blob/main/Image/1.png)
 
 
 
