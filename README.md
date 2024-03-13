@@ -100,7 +100,7 @@
 
 - 需要修改的地方可能为：（除了它其余地方不要改）
 
-  ![image](https://github.com/nuistzimoli/MUTAN-for-VQA/blob/main/Image/3.png)
+  ![image](https://github.com/nuistzimoli/MUTAN-for-VQA/blob/main/Image/2.png)
 
 - 然后运行evaluate.py即可，就得到了训练好的模型对验证集的评估。
 
@@ -113,15 +113,17 @@
 - 注释掉35行，取消注释36行
 - 注释掉37行，取消注释38行
 - 在E:\Python_Code\Study\Vqa\FeatureFusion\MUTAN\Evaluate_Vqav2\Results下创建一个名为：v2_OpenEnded_mscoco_test2015_fake_results.json的空文件。
+- 把最后一行phase='valid'改为phase='test'
 - 运行get_result.py就得到了test集的结果
 - 然后打开官网：https://eval.ai/web/challenges/challenge-page/830/phases
 - 先注册账号
 - 然后按照下面执行
 
+![image](https://github.com/nuistzimoli/MUTAN-for-VQA/blob/main/Image/3.png)
+
 ![image](https://github.com/nuistzimoli/MUTAN-for-VQA/blob/main/Image/4.png)
 
 ![image](https://github.com/nuistzimoli/MUTAN-for-VQA/blob/main/Image/5.png)
-
 
 &emsp;&emsp;​​最后点击submit即可，等待五分钟左右即可看到结果。
 
